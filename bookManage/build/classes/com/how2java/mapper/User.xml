@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.how2java.mapper.UserMapper">
+    <select id="selectAll"  resultType="User">
+   		select * from 
+   		(select a1.*,rownum rn from (select us_id id,us_name name,us_num num,us_tel tel from bk_user
+   		<if test="user!=null">
+        	where us_id like '%'||#{user}||'%' or us_name like '%'||#{user}||'%'
+        </if>
+   		) 
+   		a1 where <![CDATA[rownum <= #{count}]]>) where <![CDATA[rn > #{start}]]>
+    </select>    	    
+</mapper>
+

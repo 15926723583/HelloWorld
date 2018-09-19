@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	font-size: 12px;
+}
+a{
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	color:#000;
+	text-decoration:none;
+}
+#header{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 88px;
+	background-image: url(../images/topbg.gif);
+}
+.top_left img{
+	margin-top: 12px;
+}
+#menu{
+	position: absolute;
+	left: 0px;
+	top: 88px;
+	bottom: 0px;
+	width: 200px;
+	background-image: url(../images/leftline.gif);
+}
+#menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#menu ul li{
+	color: #000;
+	border-bottom: 1px solid #DA4453;
+}
+#menu ul li a{
+	display: block;
+	padding: 14px 22px;
+}
+#menu ul li a i{
+	width: 34px;
+}
+.submenu-indicator{
+	float:right;
+	font-size: 20px;
+	-o-transition: transform .3s linear;
+	-ms-transition: transform .3s linear;
+	-moz-transition: transform .3s linear;
+	-webkit-transition: transform .3s linear;
+}
+.submenu-indicator-minus>.submenu-indicator {
+	transform: rotate(45deg)
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+#menu ul li ul li{
+	border-bottom: none;
+	background-color: #383838;
+}
+.active{
+	background-color: #DA4453;
+}
+.menu_first{
+	font-size: 16px;
+}
+.menu_first:hover{
+	background-color: #DA4453;
+	transition: 0.5s all;
+}
+.menu_second{
+	font-size: 14px;
+	border-left: solid 6px #f0f9fd;
+	background-color: #f0f9fd;
+}
+.menu_second:hover{
+	transition: all .25s;
+	border-left-color:#DA4453;
+}
+.menu_third{
+	font-size: 12px;
+	border-left: solid 6px #383838;
+}
+.menu_third:hover{
+	transition: all .25s;
+	border-left-color:#DA4453;
+}
+.ink {
+	display: block; 
+	position: absolute;
+	transform: scale(0);
+	border-radius: 100%;
+	background: hsl(180, 40%, 80%);
+}
+.ink.animate {
+	animation: ripple 0.5s linear;
+}
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}
+#body{
+	right: 0px;
+	top: 88px;
+	bottom: 0px;
+	left: 200px;
+	overflow: hidden;
+	position: absolute;
+}
+#body iframe{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.top_left{
+	height: 88px;
+	background: url(../images/topleft.jpg)  289px  88px repeat-x ;
+	width: 300px;
+	float: left;
+}

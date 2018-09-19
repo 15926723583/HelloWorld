@@ -1,0 +1,145 @@
+@charset "UTF-8";
+body{
+	padding:0px;
+	margin:0px;
+	background-color:#1c77ac;
+	background-image: url("../images/light.png");
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	overflow: hidden;
+	font-size:12px;
+}
+.loginTop{
+	height: 47px;
+	position: absolute;
+	top: 0;
+	background: url(../images/loginbg1.png) repeat-x;
+	z-index: 100;
+	width: 100%;
+}
+.loginTop span {
+	color: #fff;
+	line-height: 47px;
+	background: url(../images/loginsj.png) no-repeat 21px 18px;
+	text-indent: 44px;
+	color: #afc5d2;
+	float: left;
+}
+.loginTop ul {
+	float: right;
+	padding-right: 30px;
+	list-style:none;
+	margin:0px;
+}
+
+.loginTop ul li {
+	float: left;
+	margin-left: 20px;
+	line-height: 47px;
+}
+
+.loginTop ul li a {
+	color: #afc5d2;
+	text-decoration: none;
+}
+
+.loginTop ul li a:hover {
+	color: #fff;
+}
+.loginBody{
+	background: url(../images/loginbg3.png) no-repeat center center;
+	width: 100%;
+	height: 585px;
+	overflow: hidden;
+	position: absolute;
+	top: 47px;
+}
+.loginLogo{
+	width: 100%;
+	height: 71px;
+	margin-top: 30px;
+	text-align: center;
+	display:block;
+	background: url(../images/loginlogo.png) no-repeat center;
+}
+.loginForm{
+	width: 692px;
+	height: 373px;
+	margin-top: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left:-346px;
+	background: url(../images/logininfo2.png) no-repeat;
+}
+.loginForm ul{
+	margin-top: 88px;
+	margin-left: 285px;
+	display: block;
+	list-style: none;
+	padding:0px;
+}
+.loginForm ul li{
+	margin-bottom:25px;
+	display: block;
+	list-style: none;
+}
+.loginuser{
+	width: 300px;
+	height: 48px;
+	background: url(../images/loginuser.png) no-repeat;
+	border: none;
+	line-height: 48px;
+	padding-left: 44px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.loginpwd{
+	width: 300px;
+	height: 48px;
+	background: url(../images/loginpassword.png) no-repeat;
+	border: none;
+	line-height: 48px;
+	padding-left: 44px;
+	font-size: 14px;
+	color: #90a2bc;
+}
+.loginbtn{
+	border:0px;
+	width: 111px;
+	height: 35px;
+	background: url(../images/buttonbg.png) repeat-x;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	line-height: 35px;
+}
+.loginForm ul li label {
+	color: #687f92;
+	padding-left: 25px;
+}
+
+.loginForm ul li label a {
+	color: #687f92;
+	text-decoration: none;
+}
+
+.loginForm ul li label a:hover {
+	color: #3d96c9;
+}
+.loginFooter {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: url(../images/loginbg2.png) repeat-x;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #0b3a58;
+}
+
+.loginFooter a {
+	font-weight: bold;
+	color: #0b3a58;
+	text-decoration: none;
+}

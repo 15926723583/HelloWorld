@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.how2java.mapper.BorrowHisMapper">
+	    <select id="showBorrowHis" parameterType="BorrowHis"  resultType="BorrowHis">
+	       select bk_id bkid,bk_name bkname,us_id usid,us_name usname,us_tel ustel,be_time betime,end_time endtime,is_gui isgui from bk_his where 1 = 1    
+	        <if test="value!=null">
+            	and bk_id like '%'||#{value}||'%' or bk_name like '%'||#{value}||'%' or us_name like '%'||#{value}||'%' or  is_gui like  '%'||#{value}||'%'
+            </if>
+	    </select>    	    
+	</mapper>
+

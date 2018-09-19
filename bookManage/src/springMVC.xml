@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+    <context:annotation-config/>
+	<!--配置Controller层-->
+    <context:component-scan base-package="com.how2java.controller">
+          <context:include-filter type="annotation" 
+          expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+	<!-- 为了可以使用注解，如果不加也会有默认的一小部分 -->
+    <mvc:annotation-driven />
+    <!-- 加载静态资源 -->
+    <mvc:default-servlet-handler />
+    <!-- 用来加载静态资源的方法二 -->
+    <mvc:resources location="/css/" mapping="/css/**"/>
+
+	<!--视图定位器-->
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+            value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    
+    
+    <!--拦截器拦截强制登陆 -->
+    <!-- 拦截器的路径基于视图定位(controller的RequestMapping) 
+         mapping 要拦截的路径 
+         exclude-mapping 不拦截的路径，路径可以参考下面对比得到总结
+         bean，Interceptor类，注意方法的参数固定，不可增添参数
+                      三个方法分别是调用controller之前，服务层时，和完成整个流程之后
+    -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 拦截全部  -->
+			<mvc:mapping path="/**" />
+			<!-- 放行下面的资源-->
+			<mvc:exclude-mapping path="/login.jsp"/>
+			<mvc:exclude-mapping path="/loginAgain.jsp"/>
+			<mvc:exclude-mapping path="/register.jsp"/>
+			<mvc:exclude-mapping path="/images/**"/>
+			<mvc:exclude-mapping path="/css/style.css"/>
+			<mvc:exclude-mapping path="/css/kuangjia.css"/>
+			<mvc:exclude-mapping path="/css/picture.css"/>
+			<mvc:exclude-mapping path="/js/jquery-3.2.1.js"/>
+			<mvc:exclude-mapping path="/userManager/addUser"/>
+			<mvc:exclude-mapping path="/userManager/loginInfo"/>
+			<mvc:exclude-mapping path="/userManager/checkUser"/>
+			<bean class="com.how2java.interceptor.IndexInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans>

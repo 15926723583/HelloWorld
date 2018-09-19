@@ -1,0 +1,197 @@
+input[type="text"] {
+	width: 200px;
+	padding: 10px;
+	border-radius: 4px;
+	border:solid 1px #ddd;
+}
+input[type="text"]:focus{
+	border: solid 1px #0ae;
+}
+input[type="Button"] {
+	color: #fff;
+	width: 120px;
+	padding: 10px;
+	border-radius: 4px;
+	border: solid 1px #0ae;
+	background-color: #0ae;     
+}
+
+
+input[type="Reset"] {
+	color: #fff;
+	width: 120px;
+	padding: 10px;
+	border-radius: 4px;
+	border: solid 1px #0ae;
+	background-color: #0ae;
+        
+}
+#Button1 {
+    color: #fff;
+    width: 120px;
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px #0ae;
+    background-color: #0ae;
+}
+
+
+input[type="Button"]:hover{
+	background-color: #08bbe1;
+}
+input[type="password"]{
+	width: 200px;
+	padding: 10px;
+	border-radius: 4px;
+	border:solid 1px #ddd;
+}
+input[type="password"]:focus{
+	border: solid 1px #0ae;
+}
+select{
+	width: 200px;
+	height: 40px;
+	border-radius: 4px;
+	border:solid 1px #ddd;
+	line-height: 40px;
+	padding-left: 10px;
+	
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+}
+.select1{
+	width: 80px;
+	height: 40px;
+	border-radius: 4px;
+	border:solid 1px #ddd;
+	line-height: 40px;
+	padding-left: 10px;
+	
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+}
+textarea{
+    padding:10px;
+    border:solid 1px #ddd;
+    margin-top:0px;
+
+}
+.all{
+	width: 100%;
+	float: left;
+	border-radius: 4px;
+	border:solid 1px #ddd;
+}
+.head{
+	font-size: 15px;
+	padding: 10px 15px;
+	background-color: #fcfcfc;
+	border-bottom:solid 1px #ddd; 
+	border-radius: 4px 4px 0px 0px;
+}
+.body{
+	width:100%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.lanmu{
+	width: 100%;
+	float:left;
+	margin-top: 5px;
+
+}
+.lanmu_title{
+	width: 150px;
+	height: 50px;
+	float:left;
+	text-align: right;
+	line-height: 50px;
+}
+.lanmu_main{
+	float:left;
+	margin-left: 10px;
+	line-height: 50px;
+}
+.lanmu_title_jifen{
+	width: 200px;
+	height: 50px;
+	float:left;
+	text-align: center;
+	line-height: 50px;
+}
+.lanmu_main_jifen{
+	height: 50px;
+	float:left;
+	line-height: 50px;
+}
+.tjBtn{
+    color: #fff;
+    width: 120px;
+    padding: 10px 30px;
+    border: solid 1px #0ae;
+    background-color: #0ae;
+    border-radius: 10px;
+}
+.tjBtn:hover{
+	background-color: #08bbe1;
+}
+.bjBtn{
+    color: #fff;
+    width: 120px;
+    padding: 10px 30px;
+    border: solid 1px #0ae;
+    background-color: #0ae;
+    border-radius: 10px;
+    display:inline-block;
+}
+.bjBtn:hover{
+	cursor:pointer;
+	color:#fff;
+	background-color: #08bbe1;
+}
+.scBtn{
+    color: #fff;
+	width: 120px;
+    padding: 10px 30px;
+	border-radius: 4px;
+	border: solid 1px #f00;
+	background-color: #f00;
+    border-radius: 10px;
+    display:inline-block;
+}
+.scBtn:hover{
+	cursor:pointer;
+	color:#fff;
+	background-color: #f55;
+}
+.message{
+	height:40px;
+	float:left;
+	line-height:40px;
+}
+.lanmu1{
+	width: 100%;
+	float:left;
+	margin-top: 10px;
+}
+.lanmu_title1{
+	width: 200px;
+	float:left;
+	text-align: right;
+	line-height:50px
+}
+.lanmu_main1{
+	float:left;
+	margin-left: 10px;
+	line-height: 30px;
+}
+.lanmu_title2{
+	width: auto;
+	float:left;
+	text-align: left;
+	line-height:30px;
+	margin-left:50px;
+}

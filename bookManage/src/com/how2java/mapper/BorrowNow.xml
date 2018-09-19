@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.how2java.mapper.BorrowNowMapper">
+	    <select id="selectAll" parameterType="string"  resultType="BorrowNow">
+	        select bk_id bkid,bk_name bkname,us_id usid,us_name usname,us_tel ustel,be_time betime,end_time endtime,is_gui isgui from bk_now where 1 = 1     
+	        <if test="bname!=null">
+            	and bk_name like '%'||#{bname}||'%' or us_name like '%'||#{bname}||'%' or is_gui like '%'||#{bname}||'%'
+            </if>
+	    </select>    	    
+	</mapper>
+
