@@ -23,7 +23,7 @@
     <!-- 用来加载静态资源的方法二 -->
     <mvc:resources location="/css/" mapping="/css/**"/>
 
-	<!--视图定位器-->
+	<!--视图定位器 -->
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass"
